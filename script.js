@@ -24,3 +24,12 @@ console.log(quantidade1);
 const quantidade2 = contarNomes('Ana', 'Carlos', 'Sofia', 'Geovane');
 console.log(quantidade2);
 
+
+// Exercício 3 - ForEach Função de Array
+
+const frutas = ['maçã', 'banana', 'laranja', 'morango'];
+
+frutas.forEach((fruta) => {
+    console.log(fruta);
+})
+
