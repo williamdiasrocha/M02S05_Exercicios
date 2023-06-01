@@ -33,3 +33,12 @@ frutas.forEach((fruta) => {
     console.log(fruta);
 })
 
+// Exercicio 4 - Array map
+
+const nomes = ["John", "Jane", "Mark", "Alice"];
+
+const iniciais = nomes.map((nomes) => {
+  return nomes.charAt(0);
+});
+
+console.log(iniciais); 
