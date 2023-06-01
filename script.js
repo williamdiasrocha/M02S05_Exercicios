@@ -59,3 +59,14 @@ const anoCarro = carros.filter((carros) => {
 });
 
 console.log(anoCarro);
+
+// Exercicio 6 - Find na Função de Array
+
+//OBS.: neste exercício utilizei o array criado no exercício acima para reaproveitamento do código.
+
+const primeiroCarro = carros.find((carros) => {
+    return carros.ano > 2010;
+});
+
+console.log(primeiroCarro);
+
