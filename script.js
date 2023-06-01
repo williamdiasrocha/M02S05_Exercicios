@@ -42,3 +42,20 @@ const iniciais = nomes.map((nomes) => {
 });
 
 console.log(iniciais); 
+
+
+// Exercicio 5 - Filter na função de Array
+
+const carros = [
+    { marca: 'Toyota', modelo: 'Corolla', ano: 2015 },
+    { marca: 'Honda', modelo: 'Civic', ano: 2009 },
+    { marca: 'Ford', modelo: 'Mustang', ano: 2022 },
+    { marca: 'Chevrolet', modelo: 'Camaro', ano: 2013 },
+    { marca: 'BMW', modelo: 'X5', ano: 2018 },
+];
+
+const anoCarro = carros.filter((carros) => {
+    return carros.ano > 2010;
+});
+
+console.log(anoCarro);
