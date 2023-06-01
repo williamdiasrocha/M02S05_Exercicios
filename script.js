@@ -70,3 +70,17 @@ const primeiroCarro = carros.find((carros) => {
 
 console.log(primeiroCarro);
 
+// Exercicio 7 - Reduce
+
+const produtos = [
+    { nome: 'Camiseta', preco: 59.99 },
+    { nome: 'Calca Jeans', preco: 79.99 },
+    { nome: 'Tênis', preco: 39.99 },
+    { nome: 'Meia', preco: 9.99 },
+];
+
+const totalValor = produtos.reduce((acumulado, produtos) => {
+    return acumulado + produtos.preco;
+}, 0);
+
+console.log(totalValor);
