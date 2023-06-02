@@ -112,3 +112,32 @@ fazerRequisicao(apiUrl)
 .catch(function(error) {
     console.log('Ocorreu um erro: ', error);
 });
+
+
+// Exercicio 9 - Função Assíncrona
+
+function aguardarTempo(ms) {
+    return new Promise(resolve => {
+        setTimeout(resolve, ms);
+    })
+}
+
+async function exemploAssincrono() {
+    console.log('Início da função assíncrona');
+
+    try {
+        await aguardarTempo(2000); // aguardar por 2 segundos
+
+        await aguardarTempo(1000); // aguardar por mais 1 segundo
+
+        const resposta = await fetch('https://api.exemplo.com/dados');
+        const dados = await resposta.json();
+        console.log('Dados recebidos: ', dados);
+
+        console.log('Fim da função assincrona');
+    } catch (error) {
+        console.log('Ocorreu um erro: ', error);
+    }
+}
+
+exemploAssincrono();
