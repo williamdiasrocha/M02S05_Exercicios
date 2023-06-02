@@ -84,3 +84,31 @@ const totalValor = produtos.reduce((acumulado, produtos) => {
 }, 0);
 
 console.log(totalValor);
+
+// Exercício 8 - Promise com método fetch
+
+function fazerRequisicao(url) {
+    return new Promise(function(resolve, reject){
+        fetch(url)
+        .then(function(response) {
+            if(response.ok) {
+                resolve(response.json());
+            } else {
+                reject(new Error('Erro ao fazer a requisicao. Codigo: ' + response.status));
+            }
+        })
+        .catch(function(error) {
+            reject(error);
+        });
+    });
+}
+
+const apiUrl = 'https://jsonplaceholder.typicode.com/posts';
+
+fazerRequisicao(apiUrl)
+.then(function(dados) {
+    console.log('Dados recebidos: ', dados);
+})
+.catch(function(error) {
+    console.log('Ocorreu um erro: ', error);
+});
