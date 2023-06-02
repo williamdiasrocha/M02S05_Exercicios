@@ -141,3 +141,31 @@ async function exemploAssincrono() {
 }
 
 exemploAssincrono();
+
+// Exercício 10 - Função Await
+
+function aguardarTempo(ms) {
+    return new Promise(resolve => {
+        setTimeout(resolve, ms);
+    });
+}
+
+async function exemploAwait() {
+    console.log('Inicio da função await');
+
+    try {
+        console.log('Antes do await');
+
+        await aguardarTempo(2000); 
+
+        console.log('Após o await');
+
+        await aguardarTempo(1000);
+
+        console.log('Fim da função await');
+    } catch (error) {
+        console.log('Ocorreu um errro: ', error);
+    }
+}
+
+exemploAwait();
